@@ -1,3 +1,5 @@
+import BendPostFX from './BendPostFX';
+import HueRotate from './HueRotate';
 import { Boot } from './scenes/Boot';
 import { Game as MainGame } from './scenes/Game';
 import { GameOver } from './scenes/GameOver';
@@ -24,7 +26,8 @@ const config: Types.Core.GameConfig = {
         MainMenu,
         MainGame,
         GameOver
-    ]
+    ],
+    pipeline: { 'HueRotate': HueRotate, 'BendPostFX': BendPostFX }
 };
 
 export default new Game(config);

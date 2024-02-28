@@ -1,3 +1,5 @@
+import * as Phaser from "phaser";
+
 const fragShader = `
 #define SHADER_NAME BEND_FS
 
@@ -34,13 +36,13 @@ export default class BendPostFX extends Phaser.Renderer.WebGL.Pipelines.PostFXPi
             game,
             renderTarget: true,
             fragShader,
-            uniforms: [
-                'uProjectionMatrix',
-                'uMainSampler',
-                'uTime',
-                'uSpeed',
-                'uBendFactor'
-            ]
+            // uniforms: [
+            //     'uProjectionMatrix',
+            //     'uMainSampler',
+            //     'uTime',
+            //     'uSpeed',
+            //     'uBendFactor'
+            // ]
         });
 
         this._bend = 0.3;
